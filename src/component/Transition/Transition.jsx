@@ -2,8 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const calc = (rowIndex, totalIndex) => {
-  const blockDelay = Math.random() * 0.1;
-  const rowDelay = (totalIndex - rowIndex - 10) * 0.02;
+  const blockDelay = Math.random() * 0.3;
+  const rowDelay = (totalIndex - rowIndex - 1) * 0.02;
   return blockDelay + rowDelay;
 };
 const Transition = (Page) => {
@@ -20,7 +20,7 @@ const Transition = (Page) => {
                 animate={{ scaleY: 0 }}
                 exit={{ scaleY: 0 }}
                 transition={{
-                  duration: 0.2,
+                  duration: 1,
                   ease: [0.22, 1, 0.36, 1],
                   delay: calc(rowIndex, 5),
                 }}
@@ -40,7 +40,7 @@ const Transition = (Page) => {
                 animate={{ scaleY: 0 }}
                 exit={{ scaleY: 1 }}
                 transition={{
-                  duration: 0.2,
+                  duration: 1,
                   ease: [0.22, 1, 0.36, 1],
                   delay: calc(rowIndex, 5),
                 }}
